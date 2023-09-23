@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="panda.css">
+  <link rel="stylesheet" href="download.css">
   <link rel="stylesheet" href="hamburger.css">
   <title>Download Panda3DS - Panda3DS</title>
 </head>
@@ -51,6 +52,56 @@
       </div>
     </div>
   </nav>
+
+  <div class="card mb-3" style="max-width:80%; margin:auto; text-align:center; border-radius:10px; background-color:#f67e8ec8; padding:5px 20px">
+    <h5>Download Panda3DS</h5>
+
+    <p>
+        Panda3DS provides 2 types of builds:
+        <ul>
+            <li>
+                Nightly builds which are updated automatically and may contain newer, less-tested features.
+                You can get nightly builds here, or on Github.
+            </li>
+            <li>
+                Stable builds which are updated manually once every few weeks. To get a stable build, visit our "Releases" tab on Github instead.
+            </li>
+        </ul>
+
+        Use the table below to get a nightly build for the platform you're on.
+        When the download finishes, unzip the downloaded file and run the executable to start the emulator.
+        <br><br>
+        If you need help, check out the FAQ tab or join our Discord server for support
+    </p>
+
+    <table>
+        <thead>
+          <tr>
+            <th>Platform</th>
+            <th>Status</th>
+            <th>Download</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Windows build</td>
+            <td><a href="https://github.com/wheremyfoodat/Panda3DS/actions/workflows/Windows_Build.yml"><img src="https://github.com/wheremyfoodat/Panda3DS/actions/workflows/Windows_Build.yml/badge.svg?branch=master" alt="Windows Build" style="max-width: 100%;"></a></td>
+            <td><a href="https://nightly.link/wheremyfoodat/Panda3DS/workflows/Windows_Build/master/Windows%20executable.zip" rel="nofollow">Windows Executable</a></td>
+          </tr>
+          <tr>
+            <td>MacOS build</td>
+            <td><a href="https://github.com/wheremyfoodat/Panda3DS/actions/workflows/MacOS_Build.yml"><img src="https://github.com/wheremyfoodat/Panda3DS/actions/workflows/MacOS_Build.yml/badge.svg?branch=master" alt="MacOS Build" style="max-width: 100%;"></a></td>
+            <td><a href="https://nightly.link/wheremyfoodat/Panda3DS/workflows/MacOS_Build/master/MacOS%20Alber%20App%20Bundle.zip" rel="nofollow">MacOS App Bundle</a></td>
+          </tr>
+          <tr>
+            <td>Linux build</td>
+            <td><a href="https://github.com/wheremyfoodat/Panda3DS/actions/workflows/Linux_Build.yml"><img src="https://github.com/wheremyfoodat/Panda3DS/actions/workflows/Linux_Build.yml/badge.svg?branch=master" alt="Linux Build" style="max-width: 100%;"></a></td>
+            <td><a href="https://nightly.link/wheremyfoodat/Panda3DS/workflows/Linux_AppImage_Build/master/Linux%20executable.zip" rel="nofollow">Linux AppImage</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
