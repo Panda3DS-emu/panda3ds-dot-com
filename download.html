@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="panda.css">
   <link rel="stylesheet" href="download.css">
   <link rel="stylesheet" href="hamburger.css">
+  <link rel="stylesheet" href="wave.css">
   <title>Download Panda3DS - Panda3DS</title>
 </head>
  
@@ -102,6 +103,18 @@
       </table>
 
   </div>
+
+  <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
+    </defs>
+    <g class="parallax">
+        <use xlink: href="#gentle-wave" x="48" y="0" fill="rgba(246, 126, 152, 0.7)"/>
+        <use xlink: href="#gentle-wave" x="48" y="3" fill="rgba(246, 126, 152, 0.5)"/>
+        <use xlink: href="#gentle-wave" x="48" y="5" fill="rgba(246, 126, 152, 0.3)"/>
+        <use xlink: href="#gentle-wave" x="48" y="7" fill="rgba(246, 126, 152, 0.3)"/>
+    </g>
+  </svg>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
