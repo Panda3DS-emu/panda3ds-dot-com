@@ -21,11 +21,11 @@
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 8rem;
+        top: 9.5rem;
         flex-direction: column;
         background-color: #ce5151c8;
         width: 100%;
-        border-radius: 10px;
+        border-radius: 0px;
         text-align: center;
         transition: 0.3s;
         box-shadow:
