@@ -1,20 +1,28 @@
 <!doctype html>
 <html lang="en">
- 
+
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="panda.css">
   <link rel="stylesheet" href="hamburger.css">
   <link rel="stylesheet" href="wave.css">
   <link rel="icon" href="images/panda-icon.png">
   <title>FAQ - Panda3DS</title>
+
+  <style type="text/css">
+    ul {
+        text-align: center;
+        list-style-position: inside;
+    }
+  </style>
 </head>
- 
+
 <body style="background-color:#FFE5B4">
   <nav class="navbar navbar-expand-md sticky-top border-bottom" data-bs-theme="dark" style="background-color: #ce5151c8;">
     <div class="container justify-content-center">
@@ -28,26 +36,26 @@
             <li class="nav-item"><a class="nav-link" href="index.html" style="color:#ffffff">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="download.html" style="color:#ffffff">Download</a></li>
             <li class="nav-item"><a class="nav-link" href="faq.html" style="color:#ffffff">FAQ</a></li>
-            
+
             <div class="dropdown">
-                <button class="btn dropdown-toggle" style="color:#ffffff" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Community
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="https://discord.gg/ZYbugsEmsw">Discord</a>
-                  <a class="dropdown-item" href="https://twitter.com/Panda3DS_emu">Twitter</a>
-                  <a class="dropdown-item" href="https://www.youtube.com/@Panda3DS">Youtube</a>
-                  <a class="dropdown-item" href="https://www.reddit.com/r/Panda3DS/">Reddit</a>
-                </div>
+              <button class="btn dropdown-toggle" style="color:#ffffff" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Community
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="https://discord.gg/ZYbugsEmsw">Discord</a>
+                <a class="dropdown-item" href="https://twitter.com/Panda3DS_emu">Twitter</a>
+                <a class="dropdown-item" href="https://www.youtube.com/@Panda3DS">Youtube</a>
+                <a class="dropdown-item" href="https://www.reddit.com/r/Panda3DS/">Reddit</a>
+              </div>
             </div>
             <div class="dropdown">
-                <button class="btn dropdown-toggle" style="color:#ffffff" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Donate
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="https://www.patreon.com/wheremyfoodat">Patreon</a>
-                  <a class="dropdown-item" href="https://ko-fi.com/wheremyfoodat">Ko-Fi</a>
-                </div>
+              <button class="btn dropdown-toggle" style="color:#ffffff" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Donate
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="https://www.patreon.com/wheremyfoodat">Patreon</a>
+                <a class="dropdown-item" href="https://ko-fi.com/wheremyfoodat">Ko-Fi</a>
+              </div>
             </div>
 
             <li class="nav-item"><a class="nav-link" href="https://github.com/wheremyfoodat/Panda3DS" style="color:#ffffff">Github</a></li>
@@ -55,17 +63,53 @@
         </div>
 
         <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
       </div>
     </div>
   </nav>
 
-  <p style="text-align: center;">Guys please put the frequently asked stuff here</p>
+  <s><p style="text-align: center;">Guys please put the frequently asked stuff here</p></s>
 
-  <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+  <div class="card mb-3"
+    style="max-width:80%; margin:auto; text-align:center; border-radius:10px; background-color:#f67e8ec8; padding:5px 20px; position:relative; z-index: 100">
+    <h2 style="text-align: center;">Frequently Asked Questions</h2>
+    <br>
+    <h3>Will my favourite game work?</h3>
+    <p>The emulator is still a work in progress and not all games have been tested, but you can check our <a
+        href="https://github.com/Panda3DS-emu/Panda3DS-Games-List">Github Compatiblity List</a>. The compatibility list might not always
+        be up-to-date though, so why don't you try it out!</p>
+    <h3>Why do Miis have a photo of a panda on them?</h3>  
+    <p>The miis have a photo of a panda on them because it's a placeholder until dumping mii files from your 3DS
+        and using them are implemented, and the emulator is panda-themed</p>
+    <h3>How do I adjust my settings?</h3>
+    <p>We're still working on a <a href="https://github.com/wheremyfoodat/Panda3DS/pull/421">config menu</a>,
+        so to change your settings, you need to edit the config.toml file with a text editor like Notepad</p>
+    <h3>How can I make the emulator saves and data portable?</h3>
+    <p>Change the usePortableBuild option as described above</p>
+    <h3>Is there audio support?</h3>
+    <p>Panda3DS support for audio is a new and experimental feature. The emulator features an LLE backend for audio, which is accurate to the console but slow and off by default.
+        HLE audio is currently being implemented which will be a lot faster and enjoyable. To enable experimental support, change the following settings:
+        <br/>
+        <ul>
+        <li>Set "EnableAudio" to true</li>
+        <li>Set "EnableVsync" to false</li>
+        <li>Set "DSPEmulation" to "lle" or "hle"</li>
+        </ul>
+    </p>
+
+    <h3>Is there an Android version?</h3>
+    <p>Yes, <a href="https://nightly.link/wheremyfoodat/Panda3DS/workflows/Android_Build/master/Android%20APKs%20(arm64).zip">Pandroid</a>,
+      however it's still early in development so compatibility or performance may vary from what you get on desktop.
+    <h3>What license does Panda3DS use?</h3>
+    <p>The emulator itself is licensed under the <a
+        href="https://github.com/wheremyfoodat/Panda3DS?tab=GPL-3.0-1-ov-file">GPLv3 License</a>, and the website is
+      under the<a href="https://github.com/Panda3DS-emu/panda3ds-dot-com/blob/main/LICENSE"> MIT License</a>. </p>
+  </div>
+
+  <svg class=" waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
     <defs>
         <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
     </defs>
@@ -82,4 +126,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="hamburger.js"></script>
 </body>
+
 </html>
