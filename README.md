@@ -1,1 +1,1 @@
-Website for the Panda3DS emulator. https://panda3ds.com/
+Website for Panda3DS: https://panda3ds.com/

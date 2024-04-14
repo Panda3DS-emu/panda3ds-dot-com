@@ -14,14 +14,19 @@
   <link rel="stylesheet" href="wave.css">
   <link rel="icon" href="images/panda-icon.png">
   <title>FAQ - Panda3DS</title>
+
+  <style type="text/css">
+    ul {
+        text-align: center;
+        list-style-position: inside;
+    }
+  </style>
 </head>
 
 <body style="background-color:#FFE5B4">
-  <nav class="navbar navbar-expand-md sticky-top border-bottom" data-bs-theme="dark"
-    style="background-color: #ce5151c8;">
+  <nav class="navbar navbar-expand-md sticky-top border-bottom" data-bs-theme="dark" style="background-color: #ce5151c8;">
     <div class="container justify-content-center">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
-        aria-controls="#offcanvas" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="#offcanvas" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="#offcanvas" aria-labelledby="#offcanvasLabel">
@@ -33,8 +38,7 @@
             <li class="nav-item"><a class="nav-link" href="faq.html" style="color:#ffffff">FAQ</a></li>
 
             <div class="dropdown">
-              <button class="btn dropdown-toggle" style="color:#ffffff" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button class="btn dropdown-toggle" style="color:#ffffff" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Community
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -45,8 +49,7 @@
               </div>
             </div>
             <div class="dropdown">
-              <button class="btn dropdown-toggle" style="color:#ffffff" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button class="btn dropdown-toggle" style="color:#ffffff" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Donate
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -55,8 +58,7 @@
               </div>
             </div>
 
-            <li class="nav-item"><a class="nav-link" href="https://github.com/wheremyfoodat/Panda3DS"
-                style="color:#ffffff">Github</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://github.com/wheremyfoodat/Panda3DS" style="color:#ffffff">Github</a></li>
           </ul>
         </div>
 
@@ -68,31 +70,43 @@
       </div>
     </div>
   </nav>
+
+  <s><p style="text-align: center;">Guys please put the frequently asked stuff here</p></s>
+
   <div class="card mb-3"
     style="max-width:80%; margin:auto; text-align:center; border-radius:10px; background-color:#f67e8ec8; padding:5px 20px; position:relative; z-index: 100">
-    <!--I just copyed the css for the box from the download section-->
     <h2 style="text-align: center;">Frequently Asked Questions</h2>
     <br>
-    <h3>Will game "XYZ" work?</h3>
+    <h3>Will my favourite game work?</h3>
     <p>The emulator is still a work in progress and not all games have been tested, but you can check our <a
-        href="https://github.com/Panda3DS-emu/Panda3DS-Games-List">Github Compatiblity List</a>, and if you spot a game
-      that hasn't been tested or works better in newer builds you can report it there.</p>
+        href="https://github.com/Panda3DS-emu/Panda3DS-Games-List">Github Compatiblity List</a>. The compatibility list might not always
+        be up-to-date though, so why don't you try it out!</p>
+    <h3>Why do Miis have a photo of a panda on them?</h3>  
+    <p>The miis have a photo of a panda on them because it's a placeholder until dumping mii files from your 3DS
+        and using them are implemented, and the emulator is panda-themed</p>
+    <h3>How do I adjust my settings?</h3>
+    <p>We're still working on a <a href="https://github.com/wheremyfoodat/Panda3DS/pull/421">config menu</a>,
+        so to change your settings, you need to edit the config.toml file with a text editor like Notepad</p>
+    <h3>How can I make the emulator saves and data portable?</h3>
+    <p>Change the usePortableBuild option as described above</p>
+    <h3>Is there audio support?</h3>
+    <p>Panda3DS support for audio is a new and experimental feature. The emulator features an LLE backend for audio, which is accurate to the console but slow and off by default.
+        HLE audio is currently being implemented which will be a lot faster and enjoyable. To enable experimental support, change the following settings:
+        <br/>
+        <ul>
+        <li>Set "EnableAudio" to true</li>
+        <li>Set "EnableVsync" to false</li>
+        <li>Set "DSPEmulation" to "lle" or "hle"</li>
+        </ul>
+    </p>
+
     <h3>Is there an Android version?</h3>
-    <p>Yes you can, and its been dubbed "Pandroid" (Panda + Android), however only the <a
-        href="https://github.com/wheremyfoodat/Panda3DS/releases">stable builds</a> release for
-      it and the compatiblity may vary from what you can get on
-      PC or Mac.</p>
-    <h3>What license does Panda3DS have?</h3>
-    <p>The emulator itself is under the <a
-        href="https://github.com/wheremyfoodat/Panda3DS?tab=GPL-3.0-1-ov-file">GPL-3.0 License</a>, and the website is
+    <p>Yes, <a href="https://nightly.link/wheremyfoodat/Panda3DS/workflows/Android_Build/master/Android%20APKs%20(arm64).zip">Pandroid</a>,
+      however it's still early in development so compatibility or performance may vary from what you get on desktop.
+    <h3>What license does Panda3DS use?</h3>
+    <p>The emulator itself is licensed under the <a
+        href="https://github.com/wheremyfoodat/Panda3DS?tab=GPL-3.0-1-ov-file">GPLv3 License</a>, and the website is
       under the<a href="https://github.com/Panda3DS-emu/panda3ds-dot-com/blob/main/LICENSE"> MIT License</a>. </p>
-    <h3>Why do Miis have a photo of a panda on them?</h3>
-    <p>The miis have a photo of a panda on them because, A: the emulator is themed around pandas, and B: its a
-      placeholder until dumping files for miis from your 3DS and using them are implemented.</p>
-    <h3>How can I make the emulator portable?</h3>
-    <p>To make the emulator portable, you need to open the config.toml with a text editor (like Notepad or Vim) and
-      change "UsePortableBuild = false" to "true" and then everything the emulator needs will be in that folder Panda3DS
-      is in.</p>
   </div>
 
   <svg class=" waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
