@@ -138,7 +138,54 @@
           </tr>
         </tbody>
       </table>
+
+      <!-- We want to shove the latest version+date to the bottom of the website -->
+      <!-- So automatic downloaders and so on can tell what version is latest -->
+      <p id="last-commit" style="font-size:0.95rem; margin-top:12px; color:#fff8;">Fetching latest commit…</p>
   </div>
+
+  <script>
+    (function () {
+      // Fetch DOM element for the last commit text box
+      const textbox = document.getElementById("last-commit");
+      if (!textbox) return;
+  
+      // Fetch the latest commit info (date + hash) from Github's API
+      const owner = "wheremyfoodat";
+      const repo = "Panda3DS";
+      const branch = "master";
+      const url = `https://api.github.com/repos/${owner}/${repo}/commits/${encodeURIComponent(branch)}`;
+
+      fetch(url, { headers: { "Accept": "application/vnd.github.v3+json" } })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("Invalid network response: " + response.status)
+          };
+
+          return response.json();
+        })
+    
+        .then(data => {
+          // Use the short hash for commits, just like the emulator does
+          const sha = data.sha || "";
+          const short = sha.slice(0, 7);
+          const dateStr = (data.commit && (data.commit.committer && data.commit.committer.date || data.commit.author && data.commit.author.date)) || data.committer && data.committer.date;
+          const date = dateStr ? new Date(dateStr) : null;
+  
+          // Force UTC for datetime
+          const when = date ? date.toLocaleString("en-US", { timeZone: "UTC", year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" }) + " UTC" : "unknown date";
+          const htmlUrl = data.html_url || `https://github.com/${owner}/${repo}/commit/${sha}`;
+
+          // Update textbox
+          textbox.innerHTML = `Latest version: <a href="${htmlUrl}" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">v0.9.${short}</a> — ${when}`;
+        })
+
+        .catch(err => {
+          console.error("Failed to fetch latest commit", err);
+          textbox.textContent = "Failed to fetch latest commit";
+        });
+    })();
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
